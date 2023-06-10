@@ -3,7 +3,7 @@
 #################################
 
 # Name of NewGRF, as it appears in file names
-newgrf_name = "sals_canalboats"
+newgrf_name = "sals_canalboats_ex"
 
 # Files which should be first, in order (header, cargotable, etc)
 header_stuff = ["header"]
@@ -11,11 +11,11 @@ header_stuff = ["header"]
 # Files to place in alphabetical order below
 unordered_stuff = ["narrowboat", "narrow_packetboat"]
 
-# Do you want to copy the completed NewGRF to your OpenTTD folder? (True/False)
-copy_bool = True
+# # Do you want to copy the completed NewGRF to your OpenTTD folder? (True/False)
+# copy_bool = False
 
-# What is the path of your OpenTTD folder?
-openttd_path = "C:/Users/tyler/Documents/OpenTTD/newgrf"
+# # What is the path of your OpenTTD folder?
+# openttd_path = "C:/Users/tyler/Documents/OpenTTD/newgrf"
 
 #################################
 # NO NEED TO CHANGE STUFF BELOW #
@@ -57,13 +57,13 @@ processed_nml_file.close()
 
 print("#### nmlc ####")
 
-# Run 
-nmlc = subprocess.run(["nmlc", "-c", "-t", "src\custom_tags.txt", "-l", "src\lang", "--grf", grf_name, merged_nml_path], stdout = subprocess.PIPE, stderr = subprocess.PIPE, text=True)
+# Run
+nmlc = subprocess.run(["nmlc", "-c", "-t", "src/custom_tags.txt", "-l", "src/lang", "--grf", grf_name, merged_nml_path], stdout = subprocess.PIPE, stderr = subprocess.PIPE, text=True)
 print(nmlc.stdout)
 print(nmlc.stderr)
 
-if copy_bool == True:
-    print("Copying NewGRF to OpenTTD folder")
-    shutil.copy(grf_name, openttd_path )
-else:
-    print("Complete. Did not copy.")
+# if copy_bool == True:
+#     print("Copying NewGRF to OpenTTD folder")
+#     shutil.copy(grf_name, openttd_path )
+# else:
+#     print("Complete. Did not copy.")
