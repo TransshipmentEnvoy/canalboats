@@ -3,3 +3,4 @@ sals_canalboats_ex.nml
 *.grf
 .nmlcache
 .venv
+path_def.json
