@@ -44,6 +44,14 @@ switch(FEAT_SHIPS, SELF, switch_narrowboat_arti, extra_callback_info1) {
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
+switch(FEAT_SHIPS, SELF, switch_narrowboat_arti_name, getbits(extra_callback_info1, 0, 8)) {
+    0: return string(STR_NAME_NARROWBOAT__CABIN_1);
+    1: return string(STR_NAME_NARROWBOAT__CABIN_2);
+    2: return string(STR_NAME_NARROWBOAT__CABIN_3);
+    3: return string(STR_NAME_NARROWBOAT__CABIN_4);
+    return CB_RESULT_NO_TEXT;
+}
+
 switch(FEAT_SHIPS, SELF, switch_narrowboat_arti_cap, position_in_consist) {
     return 27; // todo
 }
@@ -73,7 +81,9 @@ item(FEAT_SHIPS, narrowboat) {
 	}
 	graphics {
         articulated_part:           switch_narrowboat_arti;
+        refit_part_name:            switch_narrowboat_arti_name;
         cargo_capacity:             switch_narrowboat_arti_cap;
+        purchase_cargo_capacity:    108;
 		default: spritegroup_narrowboat_tarp;
 	}
 }
