@@ -1,2 +1,4 @@
 sals_canalboats.nml
 *.grf
+.nmlcache
+.venv
