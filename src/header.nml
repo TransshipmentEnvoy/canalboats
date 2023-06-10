@@ -1,9 +1,9 @@
 grf {
-	grfid: "TT\05\01";
+	grfid: "TT\05X";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
-	version: 5;
-	min_compatible_version: 4;
+	version: 1;
+	min_compatible_version: 1;
 }
 
 cargotable {
