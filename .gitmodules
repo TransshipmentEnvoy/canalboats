@@ -1,0 +1,3 @@
+[submodule "thirdparty/nml"]
+	path = thirdparty/nml
+	url = https://github.com/JGRennison/nml.git
