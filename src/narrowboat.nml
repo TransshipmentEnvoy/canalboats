@@ -53,7 +53,7 @@ switch(FEAT_SHIPS, SELF, switch_narrowboat_arti_name, getbits(extra_callback_inf
 }
 
 switch(FEAT_SHIPS, SELF, switch_narrowboat_arti_cap, position_in_consist) {
-    return 27; // todo
+    return 21; // todo
 }
 
 item(FEAT_SHIPS, narrowboat) {
@@ -78,13 +78,13 @@ item(FEAT_SHIPS, narrowboat) {
         refit_cost:					0;
 		is_refittable:				1;
 		default_cargo_type:			COAL;
-		cargo_capacity:				27; // full 27 * 4 = 108
+		cargo_capacity:				21; // full 21 * 4 = 84
 	}
 	graphics {
         articulated_part:           switch_narrowboat_arti;
         refit_part_name:            switch_narrowboat_arti_name;
         cargo_capacity:             switch_narrowboat_arti_cap;
-        purchase_cargo_capacity:    108;
+        purchase_cargo_capacity:    21;
 		default: spritegroup_narrowboat_tarp;
 	}
 }
